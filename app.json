@@ -7,9 +7,9 @@
         "telegram bot",
         "video stream"
     ],
-    "website": "https://t.me/levinachannel",
-    "repository": "https://github.com/levina-lab/video-stream",
-    "success_url": "https://t.me/dlwrml",
+    "website": "https://t.me/darvinchannel",
+    "repository": "https://github.com/Hydrayt777/Video-User-bot",
+    "success_url": "https://t.me/darvinlwrml",
     "env": {
         "API_ID": {
             "description": "your APP_ID from my.telegram.org",
