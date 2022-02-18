@@ -11,17 +11,17 @@ VIDEO_CALL = {}
 
 
 
-@app.on_message(filters.outgoing & filters.command('live'))
+@app.on_message(filters.outgoing & filters.command('ply'))
 async def stream(client, m: Message):
     replied = m.reply_to_message
     if not replied:
-        await m.reply("❌ **Mohon Balas Ke Video**")
+        await m.reply("❌ **Please Reply To Video**")
     elif replied.video or replied.document:
-        msg = await m.reply("📥 **Mulai Mengunduh...**")
+        msg = await m.reply("📥 **Start Download...**")
         chat_id = m.chat.id
         try:
             video = await client.download_media(m.reply_to_message)
-            await msg.edit("🔁 **Memproses**")
+            await msg.edit("🔁 **Processing**")
             os.system(f'ffmpeg -i "{video}" -vn -f s16le -ac 2 -ar 48000 -acodec pcm_s16le -filter:a "atempo=0.81" vid-{chat_id}.raw -y')
             print()
         except Exception as e:
@@ -32,13 +32,13 @@ async def stream(client, m: Message):
             await group_call.start(chat_id)
             await group_call.set_video_capture(video)
             VIDEO_CALL[chat_id] = group_call
-            await msg.edit("**🎥 Mulai Live Video!**")
+            await msg.edit("**🎥 Start Live Video!**")
             print()
         except Exception as e:
             await msg.edit(f"**Error** -- `{e}`")
             return os.system("rm -rf downloads")
     else:
-        await m.reply("❌ **Mohon Balas Ke Video**")
+        await m.reply("❌ **Please Reply To Video**")
         return os.system("rm -rf downloads")
 
 @app.on_message(filters.outgoing & filters.command("repo"))
@@ -46,7 +46,7 @@ async def repo(client, m: Message):
     await m.reply_text("**Nih kak reponya kalau mau deploy**\n[REPO](https://github.com/kenkansaja/Video-Userbot)", disable_web_page_preview=True)
 
 
-@app.on_message(filters.outgoing & filters.command('mati'))
+@app.on_message(filters.outgoing & filters.command('stop'))
 async def stopvideo(client, m: Message):
     chat_id = m.chat.id
     try:
