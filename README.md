@@ -1,7 +1,7 @@
 # Video-Userbot
-Userbot untuk memutar video dari group
+Userbot to play videos from groups
 
-## HEROKU
+## DEPLOY HEROKU
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/kenkansaja/Video-Userbot"><img src="https://img.shields.io/badge/BUAT DI-HEROKU-blue?style=plastic&logo=heroku&logoColor=yellow"width="300"heigh="100" /></a></p>
 
@@ -12,14 +12,13 @@ Userbot untuk memutar video dari group
 
 
 ## VIA REPLIT
-Klik tombol dibawah untuk mengambil Pyrogram String Session Atau pilih p bukan t
-
+Click the button below to take Pyogram String Session Or select p instead of t
 <p align="center"><a href="https://replit.com/@kenkannih/strings-session#main.py"><img src="https://img.shields.io/badge/REPLIT-STRINGS-yellow?style=plastic&logo=replit&logoColor=yellow"width="270" height="40" /></a></p>
 
 # COMMAND
 
 
-COMMAND | FUNGSI
+COMMAND | FUNCTION
 :--- | :---
-/live | Untuk memulai stream
-/mati | Menghentikan stream
+/live | To start stream
+/stop | Stopping the stream
