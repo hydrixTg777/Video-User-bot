@@ -11,5 +11,5 @@ Userbot to play videos from groups
 
 COMMAND | FUNCTION
 :--- | :---
-/live | To start stream
+/ply | To start stream
 /stop | Stopping the stream
